@@ -100,6 +100,8 @@ namespace TechJobsConsole
                 }
 
                 string input = Console.ReadLine();
+
+
                 choiceIdx = int.Parse(input);
 
                 if (choiceIdx < 0 || choiceIdx >= choiceKeys.Length)
@@ -118,7 +120,24 @@ namespace TechJobsConsole
 
         private static void PrintJobs(List<Dictionary<string, string>> someJobs)
         {
-            Console.WriteLine("printJobs is not implemented yet");
+            // TODO Complete PrintJobs method
+            //Console.WriteLine("printJobs is not implemented yet");
+            if (someJobs.Count == 0) {
+                Console.WriteLine("\n*****");
+                Console.WriteLine("No results found.");
+            }
+                
+
+            else {
+                foreach(Dictionary<string, string> jobs in someJobs) {
+                Console.WriteLine("\n*****");
+                foreach (KeyValuePair<string, string> job in jobs) {
+                    Console.WriteLine(job.Key.ToString() + ": " + job.Value.ToString());
+                    }
+                Console.WriteLine("*****");
+                }
+                
+            }
         }
     }
 }
