@@ -119,6 +119,9 @@ namespace TechJobsConsole
             return choiceKeys[choiceIdx];
         }
 
+        /*
+         * Displays the jobs to the user
+         */
         private static void PrintJobs(List<Dictionary<string, string>> someJobs)
         {
 
